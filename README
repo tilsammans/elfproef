@@ -1,0 +1,34 @@
+Elfproef
+========
+
+This plugin adds a validation method for Dutch bank account numbers. These can
+be validated using the so-called Elfproef.
+
+http://www.spacebabies.nl/rails-plugins/elfproef/
+
+
+Installation
+------------
+
+1. go to your application's root directory
+2. ruby script/plugin install git://github.com/tilsammans/elfproef.git
+3. restart your application
+
+Optionally, you might want to bask in the glory of a unit-tested piece of
+software, simply by running 'rake test' inside the elfproef directory.
+
+
+Usage
+-----
+
+Simply add "validates_elfproef_of" to your model class.
+
+class User < ActiveRecord::Base
+  validates_elfproef_of :bank_account
+end
+
+
+License
+-------
+
+MIT License, like Rails.
